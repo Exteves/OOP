@@ -3,29 +3,43 @@ package main
 import "fmt"
 
 func main() {
-	p := Pessoa{
+	var c Churrasco
+
+	//SETANDO OS ATRIBUTOS DA STRUCT E PRINTANDO O RETORNO DA FUNC
+
+	fmt.Println(c.verificarConsumo(Pessoa{
 		"Renan",
 		22,
 		false,
 		true,
-	}
-	c := Churrasco{2}
-
-	c.verificarConsumo()
+	}))
 }
 
-type Pessoa struct{
-	Nome string
-	idade int
+//CRIANDO A CLASSE PESSOA - NO CASO DO GO O TIPO STRUCT PESSOA
+
+type Pessoa struct {
+	Nome              string
+	idade             int
 	vegetariana, sexo bool
 }
 
-type Churrasco struct{
-	qtdCarne float32	
+//CRIANDO A CLASSE CHURRASCO
+
+type Churrasco struct {
+	qtdCarne float32
 }
 
-func (c *Churrasco) verificarConsumo(p *Pessoa){
-	fmt.Println(p.Nome)
-	c.qtdCarne = 2
-	fmt.Println(c.qtdCarne)
+//CRIANDO O MÉTODO DA CLASSE CHURRASCO E PASSANDO A STRUCT PESSOA COMO PARAMETRO
+
+func (c Churrasco) verificarConsumo(p Pessoa) float32 {
+	if (p.idade < 3) || (p.vegetariana) {
+		c.qtdCarne = 0
+	} else {
+		if (p.idade > 3) && (p.idade < 13) {
+			c.qtdCarne = 1
+		} else {
+			c.qtdCarne = 2
+		}
+	}
+	return c.qtdCarne
 }
