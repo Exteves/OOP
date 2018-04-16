@@ -34,7 +34,7 @@ private ArrayList<Estrela> star;
 		}		
     }
     
-    public void tempConstelacao(){
+    public void tempTotal(){
         double total = 0;
         for(Estrela e: star){											
             total += e.getTemp();										
@@ -42,8 +42,9 @@ private ArrayList<Estrela> star;
         
         System.out.println("A soma total da temperatura das estrelas é = " + total + " °C");
     }
+      
     
-    public void introducao() {
+    public void InfoConstelacao() {
     	System.out.println("Bem vindo a constelação Orion");
     	System.out.println();										   
     	System.out.println("Fazem parte desta constelação as estrelas: ");
