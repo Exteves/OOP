@@ -22,7 +22,7 @@ private ArrayList<Estrela> star;
         star.add(e);
     }
        
-    public void mostrarEstrelas(){											
+    public void infoEstrelas(){											
     	//Obrigatorio
     	System.out.println("Informações das estrelas desta constelação: ");
     	System.out.println();                                           
