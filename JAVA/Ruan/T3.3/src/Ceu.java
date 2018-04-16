@@ -1,15 +1,31 @@
+/**
+ * @author ruani
+ *
+ */
+
 public class Ceu {
+	
+	/**
+	 * @param args
+	 */
+	
 	public static void main(String[] args) {
 		
-		Estrela e1 = new Estrela("Rigel","Amarela");
-		Estrela e2 = new Estrela("Sol","Amarela");
-		Estrela e3 = new Estrela("Pollux","Branca");
-		Estrela e4 = new Estrela("Sirius","Azul");
-		Constelacao c = new Constelacao("Orion");
-		c.adicionar("1050",e1);
-		c.adicionar("1200",e2);
-		c.adicionar("3000",e3);
-		c.adicionar("3000",e4);
-		c.listarEstrelas();		
-		}
+		Estrela e1 = new Estrela("Rigel",1050,"Amarela");
+		Estrela e2 = new Estrela("Sol",1200,"Amarela");
+		Estrela e3 = new Estrela("Pollux",3000,"Azul");
+		Estrela e4 = new Estrela("Sirius",3500,"Black");
+		Constelacao c = new Constelacao();									
+		c.introducao();
+		c.adicionar(e1);
+		c.adicionar(e2);
+		c.adicionar(e3);
+		c.adicionar(e4);
+		e1.mostrar();
+		e2.mostrar();
+		e3.mostrar();
+		e4.mostrar();
+		c.infoEstrelas();
+		c.tempConstelacao();
+	}
 }

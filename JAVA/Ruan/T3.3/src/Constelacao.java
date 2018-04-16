@@ -1,28 +1,52 @@
-import java.util.HashMap;
-import java.util.Map.Entry;
+import java.util.ArrayList;
+
+/**
+ * @author ruani
+ *
+ */
 
 public class Constelacao {
-	private String nome;
-	private HashMap<String,Estrela> stars;
 	
-	public Constelacao(String nome) {
-		this.nome = nome;
-		this.stars = new HashMap<String,Estrela>();
-	
-	}
-	
-	public void adicionar(String temp, Estrela e) {
-		stars.put(temp, e);
-	}
-	
-	public Estrela buscarAluno(String temp) {
-		return stars.get(temp);
-	}
-	
-	public void listarEstrelas() {
-		for(Entry<String, Estrela> reg: stars.entrySet()) {
-			System.out.println(reg.getKey());
-			reg.getValue().mostrarEstrela();
-		}
-	}
+	/**
+	 * @param args
+	 */
+
+private ArrayList<Estrela> star;										
+    
+    public Constelacao(){
+        this.star = new ArrayList<Estrela>();							
+    }																	
+    
+    public void adicionar(Estrela e){									
+        star.add(e);
+    }
+       
+    public void infoEstrelas(){											
+    	
+    	System.out.println("Informações das estrelas desta constelação: ");
+    	System.out.println();                                           
+		for(Estrela e: star) {
+			
+            System.out.println("A estrela: " + e.getNome());				    
+            System.out.println("tem uma temperatura de " + e.getTemp() + " °C");	
+            System.out.println("e coloração: " + e.getCor());					
+            System.out.println();                                      			
+		}		
+    }
+    
+    public void tempConstelacao(){
+        double total = 0;
+        for(Estrela e: star){											
+            total += e.getTemp();										
+        }
+        
+        System.out.println("A soma total da temperatura das estrelas é = " + total + " °C");
+    }
+    
+    public void introducao() {
+    	System.out.println("Bem vindo a constelação Orion");
+    	System.out.println();										   
+    	System.out.println("Fazem parte desta constelação as estrelas: ");
+    	System.out.println();
+    }
 }
