@@ -25,7 +25,7 @@ public class Ceu {
 		e2.mostrar();
 		e3.mostrar();
 		e4.mostrar();
-		c.infoEstrelas();
-		c.tempTotal();
+		c.mostrarEstrelas();
+		c.tempConstelacao();
 	}
 }

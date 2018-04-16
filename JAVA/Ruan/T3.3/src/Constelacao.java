@@ -17,12 +17,13 @@ private ArrayList<Estrela> star;
         this.star = new ArrayList<Estrela>();							
     }																	
     
-    public void adicionar(Estrela e){									
+    public void adicionar(Estrela e){	
+    	//Obrigatorio 
         star.add(e);
     }
        
-    public void infoEstrelas(){											
-    	
+    public void mostrarEstrelas(){											
+    	//Obrigatorio
     	System.out.println("Informações das estrelas desta constelação: ");
     	System.out.println();                                           
 		for(Estrela e: star) {
@@ -34,7 +35,8 @@ private ArrayList<Estrela> star;
 		}		
     }
     
-    public void tempTotal(){
+    public void tempConstelacao(){
+    	//Obrigatorio
         double total = 0;
         for(Estrela e: star){											
             total += e.getTemp();										
