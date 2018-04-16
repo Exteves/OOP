@@ -27,7 +27,6 @@ private ArrayList<Estrela> star;
     	System.out.println("Informações das estrelas desta constelação: ");
     	System.out.println();                                           
 		for(Estrela e: star) {
-			
             System.out.println("A estrela: " + e.getNome());				    
             System.out.println("tem uma temperatura de " + e.getTemp() + " °C");	
             System.out.println("e coloração: " + e.getCor());					
