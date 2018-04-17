@@ -1,12 +1,13 @@
 
+
 public class PartidoPolitico {
 		
 		private String nome;
 		private String ideologia;
 		private String sigla;
-		private int numero;
+		private String numero;
 
-		    public PartidoPolitico(String nome, String ideologia, String sigla, int numero) {
+		    public PartidoPolitico(String nome, String ideologia, String sigla, String numero) {
 		        this.nome = nome;
 		        this.ideologia = ideologia;
 		        this.sigla = sigla;
@@ -25,7 +26,7 @@ public class PartidoPolitico {
 		        return sigla;
 		    }
 
-		    public int getNumero() {
+		    public String getNumero() {
 		        return numero;
 		 }
 }
