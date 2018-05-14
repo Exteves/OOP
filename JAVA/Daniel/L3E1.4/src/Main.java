@@ -15,11 +15,10 @@ public class Main {
 				+ "2- GROUP \n"
 				+ "3- ROOT");
 		opt= s.nextLine();
-		
 		switch(opt) {
 		
 			case "1":
-				usuario = new Regular(login);
+				
 			break;
 			
 			case "2":
